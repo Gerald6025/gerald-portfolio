@@ -1,36 +1,45 @@
-"use client"
-import React, { useState } from 'react'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
+"use client";
+import React, { useState } from "react";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
+    e.preventDefault();
+    setIsSubmitting(true);
+
     // Simulate form submission
     setTimeout(() => {
-      console.log('Form submitted:', formData)
-      alert('Thank you for your message! I\'ll get back to you soon.')
-      setFormData({ name: '', email: '', subject: '', message: '' })
-      setIsSubmitting(false)
-    }, 1000)
-  }
+      console.log("Form submitted:", formData);
+      alert("Thank you for your message! I'll get back to you soon.");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setIsSubmitting(false);
+    }, 1000);
+  };
 
   return (
     <section id="contact" className="bg-black text-white py-20 px-4 md:px-10">
@@ -43,10 +52,13 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-semibold mb-6">
+                Let&apos;s Connect
+              </h3>
               <p className="text-gray-300 mb-8">
-                I'm always interested in hearing about new projects and opportunities. 
-                Whether you have a question or just want to say hi, feel free to reach out!
+                I&apos;m always interested in hearing about new projects and
+                opportunities. Whether you have a question or just want to say
+                hi, feel free to reach out!
               </p>
             </div>
 
@@ -118,7 +130,10 @@ const Contact = () => {
           <div className="bg-gray-900 p-8 rounded-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -134,7 +149,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -150,7 +168,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium mb-2"
+                >
                   Subject
                 </label>
                 <input
@@ -166,7 +187,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -186,14 +210,14 @@ const Contact = () => {
                 disabled={isSubmitting}
                 className="w-full bg-[#016bdb] text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
