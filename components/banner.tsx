@@ -21,7 +21,7 @@ const Banner = () => {
         </Link>
       </div>
 
-      <div className="px-2 md:px-20 mt-6 md:mt-0 flex  flex-col gap-3 items-center justify-center text-white">
+      <div className="px-2 md:px-20 mt-2 md:mt-0 flex  flex-col gap-3 items-center justify-center text-white">
         <h1 className="font-black text-3xl sm:text-4xl md:text-6xl">
           HEY, I&apos;M GERALD CHIBANDA
         </h1>
