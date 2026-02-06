@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
         "A responsive gaming blog website with interactive elements and real-time data visualization.",
       image: "/gla (1).png",
       category: "frontend",
-      technologies: ["React", "API Integration", "Charts.js"],
+      technologies: ["React", "API Integration", "TypeScript"],
       liveUrl: "https://glass-gaming.vercel.app/",
       githubUrl: "https://github.com/Gerald6025/glass-gaming",
     },
