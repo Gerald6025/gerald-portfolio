@@ -1,10 +1,17 @@
-"use client"
-import React from 'react'
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaArrowUp } from 'react-icons/fa'
+"use client";
+import React from "react";
+import Link from "next/link";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+  FaEnvelope,
+  FaArrowUp,
+} from "react-icons/fa";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -13,7 +20,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-[#016bdb]">Gerald Chibanda</h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#016bdb]">
+              Gerald Chibanda
+            </h3>
             <p className="text-gray-400 mb-4">
               A passionate web developer creating amazing digital experiences.
             </p>
@@ -23,6 +32,8 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                title="LinkedIn"
+                aria-label="LinkedIn"
               >
                 <FaLinkedin size={24} />
               </a>
@@ -31,6 +42,8 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                title="GitHub"
+                aria-label="GitHub"
               >
                 <FaGithub size={24} />
               </a>
@@ -39,12 +52,16 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                title="Twitter"
+                aria-label="Twitter"
               >
                 <FaTwitter size={24} />
               </a>
               <a
                 href="mailto:geraldgchibanda6025@gmail.com"
                 className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                title="Email"
+                aria-label="Email"
               >
                 <FaEnvelope size={24} />
               </a>
@@ -56,29 +73,44 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-[#016bdb] transition-colors">
+                <Link
+                  href="#home"
+                  className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-[#016bdb] transition-colors">
+                <Link
+                  href="#about"
+                  className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-[#016bdb] transition-colors">
+                <Link
+                  href="#projects"
+                  className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#skills" className="text-gray-400 hover:text-[#016bdb] transition-colors">
+                <Link
+                  href="#skills"
+                  className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                >
                   Skills
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-[#016bdb] transition-colors">
+                <Link
+                  href="#contact"
+                  className="text-gray-400 hover:text-[#016bdb] transition-colors"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -99,7 +131,7 @@ const Footer = () => {
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} Gerald Chibanda. All rights reserved.
           </p>
-          
+
           <button
             onClick={scrollToTop}
             className="bg-[#016bdb] hover:bg-blue-700 text-white p-3 rounded-full transition-colors"
@@ -110,7 +142,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

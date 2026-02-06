@@ -102,6 +102,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/gerald-chibanda-aa3689286/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="LinkedIn"
                   className="bg-gray-900 p-3 rounded-lg hover:bg-[#016bdb] transition-colors"
                 >
                   <FaLinkedin size={20} />
@@ -110,6 +111,7 @@ const Contact = () => {
                   href="https://github.com/Gerald6025"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="GitHub"
                   className="bg-gray-900 p-3 rounded-lg hover:bg-[#016bdb] transition-colors"
                 >
                   <FaGithub size={20} />
@@ -118,6 +120,7 @@ const Contact = () => {
                   href="https://twitter.com/GeraldChibanda"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Twitter"
                   className="bg-gray-900 p-3 rounded-lg hover:bg-[#016bdb] transition-colors"
                 >
                   <FaTwitter size={20} />
